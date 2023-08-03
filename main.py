@@ -1,0 +1,2 @@
+import os
+os.system('ffmpeg -stream_loop -1 -re -i Logo.mp4 -stream_loop -1 -re -i http://stream.zeno.fm/zw4lu2lk6o1uv -c:v libx264 -pix_fmt yuvj420p -maxrate 512k -preset ultrafast -r 12 -framerate 1 -g 48 -crf 23 -c:a aac -b:a 96k -ar 44100 -strict -2 -video_track_timescale 100 -b:v 500k -s 1280x720 -f flv rtmp://live.restream.io/live/EDITME')
